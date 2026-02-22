@@ -1,0 +1,402 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5E37C759-04CF-4E44-8A96-DDDA56DB3D76}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DBMS_FUTSAL_PROJECT</RootNamespace>
+    <AssemblyName>DBMS FUTSAL PROJECT</AssemblyName>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.2.1.66\lib\net461\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=9.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.9.0.1\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="ReaLTaiizor, Version=3.8.1.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ReaLTaiizor.3.8.1.1\lib\net481\ReaLTaiizor.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BudgetType.cs" />
+    <Compile Include="CurrentUser.cs" />
+    <Compile Include="formAllPO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formAllPO.Designer.cs">
+      <DependentUpon>formAllPO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formAllPR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formAllPR.Designer.cs">
+      <DependentUpon>formAllPR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formBooking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formBooking.Designer.cs">
+      <DependentUpon>formBooking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formBudget.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formBudget.Designer.cs">
+      <DependentUpon>formBudget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formBudgetData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formBudgetData.Designer.cs">
+      <DependentUpon>formBudgetData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formCleaning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formCleaning.Designer.cs">
+      <DependentUpon>formCleaning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formExpense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formExpense.Designer.cs">
+      <DependentUpon>formExpense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formHome.Designer.cs">
+      <DependentUpon>formHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formIndex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formIndex.Designer.cs">
+      <DependentUpon>formIndex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formLogin.Designer.cs">
+      <DependentUpon>formLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formManageEmp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formManageEmp.Designer.cs">
+      <DependentUpon>formManageEmp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formManageEmpAddress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formManageEmpAddress.Designer.cs">
+      <DependentUpon>formManageEmpAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formMyBooking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formMyBooking.Designer.cs">
+      <DependentUpon>formMyBooking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formOR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formOR.Designer.cs">
+      <DependentUpon>formOR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formAllPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formAllPayment.Designer.cs">
+      <DependentUpon>formAllPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formPayment.Designer.cs">
+      <DependentUpon>formPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formPO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formPO.Designer.cs">
+      <DependentUpon>formPO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formPR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formPR.Designer.cs">
+      <DependentUpon>formPR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formRevenue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formRevenue.Designer.cs">
+      <DependentUpon>formRevenue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formRevenueData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formRevenueData.Designer.cs">
+      <DependentUpon>formRevenueData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formSchedule.Designer.cs">
+      <DependentUpon>formSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formScheduleMac.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formScheduleMac.Designer.cs">
+      <DependentUpon>formScheduleMac.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formStudentInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formStudentInfo.Designer.cs">
+      <DependentUpon>formStudentInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mdiProperties.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RevenueType.cs" />
+    <Compile Include="Status.cs" />
+    <EmbeddedResource Include="formAllPO.resx">
+      <DependentUpon>formAllPO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formAllPR.resx">
+      <DependentUpon>formAllPR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formBooking.resx">
+      <DependentUpon>formBooking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formBudget.resx">
+      <DependentUpon>formBudget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formBudgetData.resx">
+      <DependentUpon>formBudgetData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formCleaning.resx">
+      <DependentUpon>formCleaning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formExpense.resx">
+      <DependentUpon>formExpense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formHome.resx">
+      <DependentUpon>formHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formIndex.resx">
+      <DependentUpon>formIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formLogin.resx">
+      <DependentUpon>formLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formManageEmp.resx">
+      <DependentUpon>formManageEmp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formManageEmpAddress.resx">
+      <DependentUpon>formManageEmpAddress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formMyBooking.resx">
+      <DependentUpon>formMyBooking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formOR.resx">
+      <DependentUpon>formOR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formAllPayment.resx">
+      <DependentUpon>formAllPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formPayment.resx">
+      <DependentUpon>formPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formPO.resx">
+      <DependentUpon>formPO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formPR.resx">
+      <DependentUpon>formPR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formRevenue.resx">
+      <DependentUpon>formRevenue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formRevenueData.resx">
+      <DependentUpon>formRevenueData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formSchedule.resx">
+      <DependentUpon>formSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formScheduleMac.resx">
+      <DependentUpon>formScheduleMac.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formStudentInfo.resx">
+      <DependentUpon>formStudentInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu-burger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu-burger %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu-burger %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu-burger %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye-crossed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye-crossed %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sign-in-alt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye-crossed %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\entrance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wrench-alt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\suggestion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apps-sort.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\revenue-alt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\holding-hand-revenue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calculator-money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\budget-alt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\booking.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\broom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar-clock %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reservation-smartphone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\power.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employee-man.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\order-history.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\payroll-check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\expense.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChatGPT Image Apr 3, 2025, 12_48_28 AM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChatGPT Image Apr 3, 2025, 12_59_06 AM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChatGPT_Image_Apr_3_2025_01_30_57_AM.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
